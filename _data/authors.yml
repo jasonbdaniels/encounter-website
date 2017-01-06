@@ -1,0 +1,42 @@
+# Format authors like the following.
+# Only name is required. All other variables are optional.
+# name:
+#  name: First Last
+#  title: Title Position
+#  email: email@example.com
+#  bio: |
+#    First Line of bio.
+#
+#    Another line of bio.
+
+cliff:
+  name: Cliff Wick
+  title: Lead Pastor
+  email: cliffwick@twc.com
+  bio: |
+    I encountered God at a young age and it set the course for an interesting life. I learned humility while being an air traffic controller; working with gang members in LA County taught me I could get along with anyone; it was in a maximum security prison I came to understand no one is beyond God’s care; while working in state government I found you can change any environment with good leadership. As Executive Pastor of Florence Vineyard, I came to truly understand all your skills, gifting and good ideas only work when God is empowering them. As Lead Pastor of Encounter Vineyard, my desire is everyone connects with God to find the exciting life he has for them.
+
+    I’ve been married 29 years to my wonderful wife, Diane. We are proud parents of two children; Ransom a great drummer and chemical engineer student at UK and Lydia a creative, fun and loving high school student.
+
+jon:
+  name: Jon Allis
+  title: Assitant Pastor
+  bio: |
+    I have been in the Vineyard since 1986. Dragged into the Vineyard like a stray dog, they fed me once and that was the end of that! I served in many volunteer positions in Anaheim, then worked on the conference and sales team before moving to Cincinnati as an intern for Steve Sjogren. In 1995, I became a pastor at the rapidly growing Florence Vineyard. Then in 2004 I felt God’s calling me to a new thing, which led to planting the Campbell County Vineyard.  I fired myself in 2011 as the lead pastor and am currently serving as the assistant pastor at Encounter Vineyard.  Jesus has made my life a wonderful adventure, I am forever grateful.
+
+    I've been married for 20 years to the feisty and beautiful Michelle. We have four teenagers: Jenn, Mary, Sara, and Andrew. Pray for us.
+
+heather:
+  name: Heather Tenney
+
+james:
+  name: James Tenney
+
+steve:
+  name: Steven McClure
+
+jason:
+  name: Jason Daniels
+
+ryan:
+  name: Ryan Loveless

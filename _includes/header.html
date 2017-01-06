@@ -1,0 +1,33 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ "/" | relative_url}}">
+      {% if site.image %}
+        <img src="{{ site.image | relative_url }}" height="100px" width="auto" alt="{{ sit.title | escape }}" >
+      {% else %}
+        {{ site.title | escape }}
+      {% endif %}
+    </a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <rect x="0" y="0" rx="1" ry="1" width="17.5" height="3" />
+          <rect x="0" y="6" rx="1" ry="1" width="17.5" height="3" />
+          <rect x="0" y="12" rx="1" ry="1" width="17.5" height="3" />
+        </svg>
+      </span>
+
+      <div class="trigger">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+
+  </div>
+
+</header>
