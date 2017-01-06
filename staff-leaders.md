@@ -6,7 +6,8 @@ image: /images/cliff-speaking.png
 ---
 
 <div style="width:33vw;">
-{{ "![Cliff speaking](" | append: page.image | append: ")" | markdownify }}
+{% assign image_link = page.image | relative_url %}
+{{ "![Cliff speaking](" | append: image_link | append: ")" | markdownify }}
 </div>
 
 {% for author_hash in site.data.authors %}
