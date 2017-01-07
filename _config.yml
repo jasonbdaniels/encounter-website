@@ -24,7 +24,7 @@ address: ["115 Main St.", "Newport, Ky 41071"]
 phone: "859-442-8882"
 
 baseurl: "/encounter-website" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "jasonbdaniels.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jasonbdaniels
 #github_username:  jasonbdaniels
 facebook_username: encounter.vineyard

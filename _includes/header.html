@@ -10,8 +10,8 @@
       {% endif %}
     </a>
 
-    <nav class="site-nav">
-      <span class="menu-icon">
+    <nav class="site-nav" >
+      <span class="menu-icon" onclick="showNavigation();">
         <svg viewBox="0 0 18 15" width="18px" height="15px">
           <rect x="0" y="0" rx="1" ry="1" width="17.5" height="3" />
           <rect x="0" y="6" rx="1" ry="1" width="17.5" height="3" />
@@ -19,7 +19,7 @@
         </svg>
       </span>
 
-      <div class="trigger">
+      <div class="trigger" id="nav-links">
         {% for my_page in site.pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
@@ -27,6 +27,19 @@
         {% endfor %}
       </div>
     </nav>
+
+    <script>
+    function showNavigation(){
+      var navlinks = document.getElementById("nav-links");
+
+      if(navlinks.style.display == "block"){
+        navlinks.style.display = "none";
+      }
+      else {
+        navlinks.style.display = "block";
+      }
+    }
+    </script>
 
   </div>
 
