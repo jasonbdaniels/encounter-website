@@ -48,4 +48,5 @@ permalink: /messages/archive/
 ### {{ archive[0] }}
 {% assign messages = archive[1] %}
 {% include message-table.md messages=messages %}
+<br>
 {% endfor %}
