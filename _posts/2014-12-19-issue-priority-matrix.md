@@ -10,7 +10,7 @@ tags: [message]
 
 A system defines how a goal is accomplished via computer code, and the correctness of the system is defined by whether or not a system accomplishes the goal. When a system falls short of accomplishing a goal it is declared to have an issue. Issue prioritization is important because it can impact the efficiency of reaching a more correct system. Thus an easy to understand and easy to determine prioritization system would aid in efficiently correcting other systems.
 
-![Issue Priority Matrix]({{ page.image }})
+![Issue Priority Matrix]({{ page.image | relative_url }})
 
 ## Overview
 
