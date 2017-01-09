@@ -39,7 +39,8 @@ layout: default
   {% for message in series %}
     {% if message.audio == page.audio %}
       <p>
-      {{ forloop.index }}{% case forloop.index %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}
+      {% assign index = forloop.length | minus: forloop.index0 %}
+      {{ index }}{% case index %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}
       Message in the series <em>{{ page.series }}</em>.
       </p>
       {% break %}
