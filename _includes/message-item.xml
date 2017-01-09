@@ -2,7 +2,7 @@
   <title>{{ message.title }}</title>
   <link>{{ message.url | absolute_url }}</link>
   <description>
-    Audio recording of {{ site.author }}'s message on {{ message.date | date: "%B %d, %Y" }}.
+    {% capture description %} {% include message-series-description.html message=message %} {% endcapture %}{% assign description = description | lstrip | rstrip %} {% if message.series %} <![CDATA[{{ description | lstrip | rstrip }}]]> {% else %}Audio recording of {{ site.author }}'s message on {{ message.date | date: "%B %d, %Y" }}.{% endif %}
   </description>
   <enclosure url="{{ message.audio | absolute_url }}" length="{{ message.audio_length }}" type="audio/mpeg" />
   <pubDate>{{ message.date | date_to_rfc822 }}</pubDate>

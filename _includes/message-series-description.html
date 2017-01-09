@@ -1,0 +1,9 @@
+{% assign series = site.posts | where:"series", include.message.series %}
+{% for message in series %}
+  {% if message.audio == include.message.audio %}
+    <p>
+    {% assign index = forloop.length | minus: forloop.index0 %}{{ index }}{% case index %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %} Message in the series <em>{{ include.message.series }}</em>.
+    </p>
+    {% break %}
+  {% endif %}
+{% endfor %}

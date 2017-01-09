@@ -35,17 +35,7 @@ layout: default
   <br><br>
   {% endif %}
 
-  {% assign series = site.posts | where:"series", page.series %}
-  {% for message in series %}
-    {% if message.audio == page.audio %}
-      <p>
-      {% assign index = forloop.length | minus: forloop.index0 %}
-      {{ index }}{% case index %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}
-      Message in the series <em>{{ page.series }}</em>.
-      </p>
-      {% break %}
-    {% endif %}
-  {% endfor %}
+  {% include message-series-description.html message=page %}
 
   <div class="post-content" itemprop="associatedArticle">
     {{ content }}
