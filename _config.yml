@@ -27,7 +27,7 @@ admin:
   email: jasonbdaniels@gmail.com
 timezone: America/New_York
 baseurl: "/encounter-website" # the subpath of your site, e.g. /blog
-url: "https:jasonbdaniels.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jasonbdaniels.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jasonbdaniels
 #github_username:  jasonbdaniels
 facebook_username: encounter.vineyard
