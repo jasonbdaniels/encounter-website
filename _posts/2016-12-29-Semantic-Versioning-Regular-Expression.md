@@ -3,7 +3,6 @@ title: Semantic Versioning Regular Expression
 tags: semantic versioning
 layout: post
 author: jason
-tags: [message]
 category: Code
 ---
 
