@@ -22,11 +22,10 @@ email: jasonbdaniels@gmail.com
 description: "Find what you're looking for."
 address: ["115 Main St.", "Newport, Ky 41071"]
 phone: "859-442-8882"
-
 admin:
   name: Jason Daniels
   email: jasonbdaniels@gmail.com
-
+timezone: America/New_York
 baseurl: "/encounter-website" # the subpath of your site, e.g. /blog
 url: "jasonbdaniels.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jasonbdaniels
