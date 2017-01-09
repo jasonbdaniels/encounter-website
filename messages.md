@@ -1,6 +1,6 @@
 ---
 title: Messages
-layout: page
+layout: messages-year
 permalink: /messages/
 ---
 
