@@ -3,6 +3,7 @@
     <th>Series</th><th>Title</th><th>Speaker</th><th>Date</th>
   </tr>
 
+  {% assign nil_sentinal = "--" %}
   {% assign row_count = 0 %}
   {% assign series = include.messages.first.series %}
   {% assign title_cell = "" %}
@@ -10,7 +11,7 @@
   {% assign date_cell = "" %}
 
   {% for message in include.messages %}
-    {% if message.series != series %}
+    {% if forloop.index0 > 0 and message.series != series or message.series == nil %}
       <tr>
         <td>{% if series %}<b>{{ series }}</b>{% endif %}</td><td>{{ title_cell }}</td><td>{{ speaker_cell}}</td><td>{{ date_cell }}</td>
       </tr>
@@ -29,10 +30,11 @@
     {% if message.author %}
       {% assign speaker_cell = speaker_cell | append: site.data.authors[message.author].name | append: "<br>" %}
     {% else if %}
-      {% assign speaker_cell = speaker_cell | append: site.data.authors[message.authors.first].name %}
+      {% assign speaker_cell = speaker_cell | append: site.data.authors[message.authors.first].name | split: " " | first %}
 
       {% for author in message.authors offset: 1 %}
-        {% assign speaker_cell = speaker_cell | append: ", " | append: site.data.authors[author].name %}
+        {% assign name = site.data.authors[author].name | split: " " | first %}
+        {% assign speaker_cell = speaker_cell | append: ", " | append: name %}
       {% endfor %}
 
       {% assign speaker_cell = speaker_cell | "<br>" %}
