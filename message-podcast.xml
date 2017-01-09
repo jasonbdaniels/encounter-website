@@ -4,7 +4,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>All About Everything</title>
+    <title>{{ site.title }}</title>
     <link>http://www.example.com/podcasts/everything/index.html</link>
     <language>en-us</language>
     <copyright>&#xA9; {{ "now" | date: "%Y" }} {{ site.author }}</copyright>

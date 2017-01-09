@@ -15,5 +15,3 @@ permalink: /messages/
 {% endfor %}
 
 {% include message-index.html messages=messages %}<br>
-
-[Message Archives]({{ site.baseurl }}{% link message-archives.md %})
