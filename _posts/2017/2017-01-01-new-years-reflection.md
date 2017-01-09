@@ -3,7 +3,6 @@ authors: [james, heather]
 title: New Years Reflection
 layout: message
 audio: /audio/message-05-01-16.mp3
-series: New Years Reflection
 tags: [message]
 ---
 
