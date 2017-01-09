@@ -1,6 +1,8 @@
 ---
 layout: page
 permalink: /messages/archive/
+nav: false
+title: Archive
 ---
 
 {% comment %}Construct Archive {% endcomment %}
@@ -41,8 +43,6 @@ permalink: /messages/archive/
     {% assign archives = mut_archives %}
   {% endif %}
 {% endfor %}
-
-## Archives
 
 {% for archive in archives %}
 ### {{ archive[0] }}
