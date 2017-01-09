@@ -5,7 +5,7 @@
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>{{ site.title }}</title>
-    <link>http://www.example.com/podcasts/everything/index.html</link>
+    <link>{{ site.baseurl | absolute_url }}</link>
     <language>en-us</language>
     <copyright>&#xA9; {{ "now" | date: "%Y" }} {{ site.author }}</copyright>
     <itunes:subtitle>{{ site.description }}</itunes:subtitle>
