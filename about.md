@@ -42,7 +42,7 @@ This tells a bit about us.
 
 <iframe style="width:100%; height:33vw;" src="https://www.youtube.com/embed/IthTJT3dGhw?rel=0" frameborder="0" allowfullscreen></iframe><br>
 
-Here's more about [what we believe]({{ site.baseurl }}{{ "/about/what-we-believe/" | relative_URL }}).
+Here's more about [what we believe]({{ site.baseurl }}{% link what-we-believe.md %}).
 
 ## How to get involved
 
