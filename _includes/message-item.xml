@@ -1,0 +1,10 @@
+<item>
+  <title>{{ message.title }}</title>
+  <link>{{ message.url | absolute_url }}</link>
+  <description>
+    Audio recording of {{ site.author }}'s message on {{ message.date | date: "%B %d, %Y" }}.
+  </description>
+  <enclosure url="{{ message.audio | absolute_url }}" length="{{ message.audio_length }}" type="audio/mpeg" />
+  <pubDate>{{ message.date | date_to_rfc822 }}</pubDate>
+  <guid>{{ message.url | absolute_url }}</guid>
+</item>
