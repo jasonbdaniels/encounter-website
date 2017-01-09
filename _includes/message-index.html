@@ -1,0 +1,49 @@
+<table style="width:100%; text-align:left;">
+  <tr>
+    <th>Series</th><th>Title</th><th>Speaker</th><th>Date</th>
+  </tr>
+
+  {% assign row_count = 0 %}
+  {% assign series = include.messages.first.series %}
+  {% assign title_cell = "" %}
+  {% assign speaker_cell = "" %}
+  {% assign date_cell = "" %}
+
+  {% for message in include.messages %}
+    {% if message.series != series %}
+      <tr>
+        <td>{% if series %}<b>{{ series }}</b>{% endif %}</td><td>{{ title_cell }}</td><td>{{ speaker_cell}}</td><td>{{ date_cell }}</td>
+      </tr>
+
+      {% assign series = message.series %}
+      {% assign title_cell = "" %}
+      {% assign speaker_cell = "" %}
+      {% assign date_cell = "" %}
+      {% assign row_count = row_count | plus: 1 %}
+    {% endif %}
+
+    {% capture title_cell %}
+      {{ title_cell }}• <a href="{{ message.url | relative_url }}" >{{ message.title }}</a><br>
+    {% endcapture %}
+
+    {% if message.author %}
+      {% assign speaker_cell = speaker_cell | append: site.data.authors[message.author].name | append: "<br>" %}
+    {% else if %}
+      {% assign speaker_cell = speaker_cell | append: site.data.authors[message.authors.first].name %}
+
+      {% for author in message.authors offset: 1 %}
+        {% assign speaker_cell = speaker_cell | append: ", " | append: site.data.authors[author].name %}
+      {% endfor %}
+
+      {% assign speaker_cell = speaker_cell | "<br>" %}
+    {% endif %}
+
+    {% assign message_date = message.date | date: "%b. %-d, %Y" %}
+    {% assign date_cell = date_cell | append: message_date | append: "<br>" %}
+  {% endfor %}
+
+  <tr>
+    <td>{% if series %}<b>{{ series }}</b>{% endif %}</td><td>{{ title_cell }}</td><td>{{ speaker_cell}}</td><td>{{ date_cell }}</td>
+  </tr>
+
+</table>

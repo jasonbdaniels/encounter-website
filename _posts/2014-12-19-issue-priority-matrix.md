@@ -3,7 +3,6 @@ author: jason
 title: Issue Priority Matrix
 image: /images/issue-priority-matrix.svg
 layout: post
-tags: [message]
 ---
 
 ## Background
