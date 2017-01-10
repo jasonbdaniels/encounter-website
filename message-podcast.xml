@@ -6,7 +6,7 @@
   <channel>
     <atom:link href="{{ "message-podcast.xml" | absolute_url }}" rel="self" type="application/rss+xml" />
     <title>{{ site.title }}</title>
-    <link>{{ site.baseurl | absolute_url }}</link>
+    <link>{{ "" | absolute_url }}</link>
     <language>en-us</language>
     <copyright>&#xA9; {{ "now" | date: "%Y" }} {{ site.author }}</copyright>
     <itunes:subtitle>{{ site.description }}</itunes:subtitle>
