@@ -2,20 +2,22 @@
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <atom:link href="{{ site.baseurl | absolute_url }}" rel="self" type="application/rss+xml" />
     <title>{{ site.title }}</title>
     <link>{{ site.baseurl | absolute_url }}</link>
     <language>en-us</language>
     <copyright>&#xA9; {{ "now" | date: "%Y" }} {{ site.author }}</copyright>
     <itunes:subtitle>{{ site.description }}</itunes:subtitle>
     <itunes:author>{{ site.author }}</itunes:author>
-    <description>Audio recordings of {{ site.author }}'s messages and message series from Sunday services.</description>
+    {% assign description = "Audio recordings of " | append: site.author | append: "'s messages and message series from Sunday services." %}<description>{{ description }}</description>
+    <itunes:summary>{{ description }}</itunes:summary>
     <itunes:owner>
       <itunes:name>{{ site.admin.name }}</itunes:name>
       <itunes:email>{{ site.admin.email }}</itunes:email>
     </itunes:owner>
-    <itunes:image href="{{ site.image | absolute_url }}"/>
+    <itunes:image href="{{ "/images/podcast-logo.png" | absolute_url }}"/>
     <itunes:category text="Religion &amp; Spirituality">
       <itunes:category text="Christianity"/>
       <itunes:category text="Spirituality"/>
