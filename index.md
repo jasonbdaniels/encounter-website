@@ -3,6 +3,7 @@ layout: home
 title: Welcome
 images:
   - http://www.encountervineyard.com/wp-content/uploads/2015/09/new_web_banner-940x400.jpg
+  - http://www.encountervineyard.com/wp-content/uploads/2016/11/tidings_banner-940x400.jpg
   - http://www.encountervineyard.com/wp-content/uploads/2012/10/bridge_banner-940x400.jpg
 nav: false
 ---

@@ -5,10 +5,11 @@ layout: default
 <div id="featured-image" style="width: 100%; height: 33vw; background-size: contain; background-repeat: no-repeat; background-position: center; transition: background-image 0.75s;" ></div>
 <script>
   var imageIndex = 0;
-  var changeImageInterval = setInterval(changeFeaturedImage, 5000);
   var images = {{ page.images | jsonify }};
+  var changeImageInterval = setInterval(changeFeaturedImage, 5000);
 
-  changeFeaturedImage();
+  prefetchImages();
+  changeFeaturedImage();  //Sets the initial featured image.
 
   function changeFeaturedImage(){
     var featuredImage = document.getElementById("featured-image");
@@ -16,6 +17,14 @@ layout: default
 
     featuredImage.style.backgroundImage = "url('" + nextImage + "')";
     imageIndex = (imageIndex + 1)%images.length;
+  }
+
+  function prefetchImages(){
+    for(image in images){
+      var imageElement = document.createElement("IMG");
+
+      imageElement.src = images[image];
+    }
   }
 </script>
 
