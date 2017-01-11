@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div id="featured-image" style="width: 100%; height: 33vw; background-size: contain; background-repeat: no-repeat; background-position: center; transition: background-image 0.75s;" ></div>
+<script>
+  var imageIndex = 0;
+  var changeImageInterval = setInterval(changeFeaturedImage, 5000);
+  var images = {{ page.images | jsonify }};
+
+  changeFeaturedImage();
+
+  function changeFeaturedImage(){
+    var featuredImage = document.getElementById("featured-image");
+    var nextImage = images[imageIndex];
+
+    featuredImage.style.backgroundImage = "url('" + nextImage + "')";
+    imageIndex = (imageIndex + 1)%images.length;
+  }
+</script>
+
+<div class="home">
+
+  {{ content }}
+
+</div>

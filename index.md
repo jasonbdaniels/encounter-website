@@ -1,7 +1,18 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
-
+title: Welcome
+images:
+  - http://www.encountervineyard.com/wp-content/uploads/2015/09/new_web_banner-940x400.jpg
+  - http://www.encountervineyard.com/wp-content/uploads/2012/10/bridge_banner-940x400.jpg
+nav: false
 ---
+
+# Latest Messages
+
+{% assign messages = "" | split: " " %}
+
+{% for message in site.tags.message limit: 5 %}
+  {% assign messages = messages | push: message %}
+{% endfor %}
+
+{% include message-index.html messages=messages %}<br>
