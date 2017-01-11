@@ -49,10 +49,11 @@
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
+    // top: calc((100% - 36px)/2);
+    top: $spacing-unit / 10;
+    right: $spacing-unit / 10;
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    border: 1.5px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
 
@@ -81,6 +82,7 @@
     }
 
     .page-link {
+      font-size: calc(#{$base-font-size}*1.5);
       display: block;
       padding: 5px 10px;
 
