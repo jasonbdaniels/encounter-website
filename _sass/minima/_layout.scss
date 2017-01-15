@@ -315,10 +315,7 @@
     width: auto;
     float: none;
     padding-left: 0;
-    > h3 {
-      // font-size: #{$base-font-size};
-      // font-weight: bold;
-    }
+    > h3 {/*Empty*/}
   }
 }
 .message-title {
@@ -341,34 +338,13 @@
   }
 }
 
-@include media-query($on-palm) {
-  // .message-index{
-  //   position: static;
-  //   .message-group:nth-child(even){
-  //     border-radius: 5px;
-  //   }
-  //   .message-group:nth-child(odd){
-  //     border-radius: 5px;
-  //   }
-  // }
-
-  // .message-list {
-  //   padding-bottom: calc(#{$spacing-unit}/2);
-  //   padding-left: 0px;
-  //   margin-left: 0px;
-  //   :nth-child(n+2){margin-left: 1.5ex;}
-  // }
-
-  // .message-group {
-  //   padding: 3px;
-  //   .message-list:nth-child(n){}
-  // }
-  // .message-series {}
-  // .message-title {
-  //   font-size: calc(#{$base-font-size}*1.25);
-  // }
-  // .message-author {}
-  // .message-date {}
+.message-header {
+  font-size: #{$base-font-size};
+  font-weight: bold;
+  color: #{$brand-color};
+  @include media-query($on-palm){
+    display: none;
+  }
 }
 
 //Messsage Index end

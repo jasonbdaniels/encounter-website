@@ -1,4 +1,10 @@
 <ul class="message-index" style="list-style-type:none;">
+  <li class="message-series message-header"><h3>Series</h3></li>
+  <ul class="message-list" style="list-style-type:none;">
+    <li class="message-title message-header">Title</li>
+    <li class="message-author message-header">Author</li>
+    <li class="message-date message-header">Date</li>
+  </ul>
 {% for message in include.messages %}
 
   {% if message.series != series or message.series == nil %}
