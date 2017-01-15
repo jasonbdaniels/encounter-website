@@ -1,0 +1,39 @@
+<ul class="message-index" style="list-style-type:none;">
+{% for message in include.messages %}
+
+  {% if message.series != series or message.series == nil %}
+    {% if forloop.index0 != 0 %}
+    </div> {% comment %} Ends the series list item group{% endcomment %}
+    {% endif %}
+
+    <div class="message-group">  {% comment %} Begins the series list item group{% endcomment %}
+    <li class="message-series"><h3>{{ message.series }}</h3></li>
+    {% assign series = message.series %}
+  {% else %}
+    <li class="message-series"><h3><!--Empty--></h3></li>
+  {% endif %}
+
+
+  <a href="{{ message.url | relative_url }}" >
+  <ul class="message-list" style="list-style-type:none;">
+    <li class="message-title" >• {{ message.title }}</li>
+    <li class="message-author" >
+        {% if message.author %}
+          {{ site.data.authors[message.author].name }}
+        {% else %}
+          {% assign speaker_cell = site.data.authors[message.authors.first].name | split: " " | first %}
+
+          {% for author in message.authors offset: 1 %}
+            {% assign name = site.data.authors[author].name | split: " " | first %}
+            {% assign speaker_cell = speaker_cell | append: ", " | append: name %}
+          {% endfor %}
+
+          {{ speaker_cell }}
+        {% endif %}
+    </li>
+    <li class="message-date" >{{ message.date | date: "%b. %-d, %Y" }}</li>
+  </ul>
+  </a>
+{% endfor %}
+  </div> {% comment %} Ends the last series list item group {% endcomment %}
+</ul>

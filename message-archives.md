@@ -47,6 +47,5 @@ title: Archive
 {% for archive in archives %}
 ### {{ archive[0] }}
 {% assign messages = archive[1] %}
-{% include message-index.html messages=messages %}
-<br>
+{% include message-index-2.0.html messages=messages %}
 {% endfor %}

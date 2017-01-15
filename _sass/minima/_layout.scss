@@ -185,6 +185,7 @@
 /**
  * Page content
  */
+
 .page-content {
   padding: $spacing-unit 0;
 }
@@ -201,18 +202,6 @@
     margin-bottom: $spacing-unit;
   }
 }
-
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
-
-.post-link {
-  display: block;
-  font-size: 24px;
-}
-
-
 
 /**
  * Posts
@@ -257,4 +246,139 @@
       font-size: 18px;
     }
   }
+}
+
+//Messsage Index begin
+
+.message-index{
+  position: relative;
+  padding-left: 0px;
+  margin-left: 0px;
+
+  .message-group:nth-child(even){
+    background-color: #f9f9f9;
+    border-bottom: 1.5px solid #{$grey-color-light};
+  }
+  .message-group:nth-child(odd){
+    background-color: #fff;
+    border-bottom: 1.5px solid #{$grey-color-light};
+  }
+
+  @include media-query($on-palm) {
+    position: static;
+    .message-group:nth-child(even){
+      border-radius: 5px;
+    }
+    .message-group:nth-child(odd){
+      border-radius: 5px;
+    }
+  }
+}
+
+.message-group {
+  :nth-child(n){
+    min-height: calc(#{$spacing-unit}*.75);
+    padding-top: calc(#{$spacing-unit}*.1875);
+  }
+
+  @include media-query($on-palm) {
+    padding: 3px;
+    :nth-child(n){}
+    .message-list:nth-child(n){}
+  }
+}
+.message-list {
+  text-align: left;
+  display: flex;
+  width: calc(70% - 20px);
+
+  @include media-query($on-palm) {
+    padding-bottom: calc(#{$spacing-unit}/2);
+    padding-left: 0px;
+    margin-left: 0px;
+    :nth-child(n+2){margin-left: 1.5ex;}
+
+    text-align: inherit;;
+    display:  inline;
+    width: auto;
+  }
+}
+.message-series {
+  width: calc(30% + 10px);
+  float: left;
+  padding-left: 10px;
+  > h3 {
+    font-size: #{$base-font-size};
+    font-weight: bold;
+  }
+  @include media-query($on-palm){
+    width: auto;
+    float: none;
+    padding-left: 0;
+    > h3 {
+      // font-size: #{$base-font-size};
+      // font-weight: bold;
+    }
+  }
+}
+.message-title {
+  width: 60%;
+  @include media-query($on-palm) {
+    width: auto;
+    font-size: calc(#{$base-font-size}*1.25);
+  }
+}
+.message-author {
+  width: 23%;
+  @include media-query($on-palm){
+    width: auto;
+  }
+}
+.message-date {
+  width: 17%;
+  @include media-query($on-palm){
+    width: auto;
+  }
+}
+
+@include media-query($on-palm) {
+  // .message-index{
+  //   position: static;
+  //   .message-group:nth-child(even){
+  //     border-radius: 5px;
+  //   }
+  //   .message-group:nth-child(odd){
+  //     border-radius: 5px;
+  //   }
+  // }
+
+  // .message-list {
+  //   padding-bottom: calc(#{$spacing-unit}/2);
+  //   padding-left: 0px;
+  //   margin-left: 0px;
+  //   :nth-child(n+2){margin-left: 1.5ex;}
+  // }
+
+  // .message-group {
+  //   padding: 3px;
+  //   .message-list:nth-child(n){}
+  // }
+  // .message-series {}
+  // .message-title {
+  //   font-size: calc(#{$base-font-size}*1.25);
+  // }
+  // .message-author {}
+  // .message-date {}
+}
+
+//Messsage Index end
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
 }
