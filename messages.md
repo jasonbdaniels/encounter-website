@@ -14,4 +14,4 @@ permalink: /messages/
   {% endif %}
 {% endfor %}
 
-{% include message-index.html messages=messages %}<br>
+{% include message-index-2.0.html messages=messages %}<br>

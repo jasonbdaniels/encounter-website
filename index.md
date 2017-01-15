@@ -16,4 +16,4 @@ nav: false
   {% assign messages = messages | push: message %}
 {% endfor %}
 
-{% include message-index.html messages=messages %}<br>
+{% include message-index-2.0.html messages=messages %}<br>
