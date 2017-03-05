@@ -42,6 +42,7 @@ gems:
   - jekyll-feed
   - jekyll-seo-tag
 exclude:
+  - how-to
   - Gemfile
   - Gemfile.lock
 
