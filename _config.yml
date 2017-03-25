@@ -32,6 +32,11 @@ url: "https://jasonbdaniels.github.io" # the base hostname & protocol for your s
 #github_username:  jasonbdaniels
 facebook_username: encounter.vineyard
 
+# Cloud Storage
+cloud:
+  s3:
+    audio: "https://s3.us-east-2.amazonaws.com/encounter-resources"
+
 # Conversion
 highlighter: rouge
 
