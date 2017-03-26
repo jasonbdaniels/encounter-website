@@ -5,6 +5,6 @@
     {% capture description %} {% include message-series-description.html message=message %} {% endcapture %}{% assign description = description | lstrip | rstrip %} {% if message.series %} <![CDATA[{{ description | lstrip | rstrip }}]]> {% else %}Audio recording of {{ site.author }}'s message on {{ message.date | date: "%B %d, %Y" }}.{% endif %}
   </description>{% capture src-url %}{% include message-audio-url.html message=message %}{% endcapture %}{% assign length = message.audio | file_size | to_integer %}{% if length == 0 %}{% assign length = "" %}{% endif %}
   <enclosure url="{{ src-url | lstrip | rstrip }}" length="{{ length }}" type="audio/mpeg" />
-  <pubDate>{{ message.date | date_to_rfc822 }}</pubDate>
+  <pubDate>{{ message.date | date: "%a, %d %b %Y 10:30:00 %Z" }}</pubDate>
   <guid>{{ message.url | absolute_url }}</guid>
 </item>{% endif %}
