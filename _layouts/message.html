@@ -28,8 +28,11 @@ layout: default
   </header>
 
   {% if page.audio %}
+  {% capture src-url %}
+    {% include message-audio-url.html message=page %}
+  {% endcapture %}
   <audio controls style="width: 100%;" >
-    <source src="{{ page.audio | relative_url }}" type="audio/mpeg">
+    <source src="{{ src-url | lstrip | rstrip }}" type="audio/mpeg">
   </audio>
 
   <br><br>
