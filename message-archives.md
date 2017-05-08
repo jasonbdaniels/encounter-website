@@ -1,8 +1,8 @@
 ---
-layout: page
-permalink: /messages/archive/
-nav: false
 title: Archive
+permalink: "/messages/archive/"
+layout: page
+nav: false
 ---
 
 {% comment %}Construct Archive {% endcomment %}

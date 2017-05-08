@@ -1,8 +1,12 @@
 ---
-authors: [james, heather]
 title: New Years Reflection
+date: 2017-01-01 00:00:00 -05:00
+tags:
+- message
+authors:
+- james
+- heather
 layout: message
-tags: [message]
 ---
 
 **Reflections Songs**:

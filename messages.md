@@ -1,7 +1,7 @@
 ---
 title: Messages
+permalink: "/messages/"
 layout: messages-year
-permalink: /messages/
 ---
 
 {% assign this_year = "now" | date: "%Y" %}

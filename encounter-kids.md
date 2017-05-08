@@ -1,8 +1,8 @@
 ---
-layout: page
 title: Encounter Kids
-permalink: /encounterkids
-image: /images/encounter-kids.png
+permalink: "/encounterkids"
+layout: page
+image: "/images/encounter-kids.png"
 ---
 
 <div style="width:33vw;">

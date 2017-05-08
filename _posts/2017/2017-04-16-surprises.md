@@ -1,7 +1,10 @@
 ---
-author: cliff
 title: Surprises
+date: 2017-04-16 00:00:00 -04:00
+tags:
+- message
+author: cliff
 layout: message
-tags: [message]
-audio: /audio/2017/message-2017-04-16.mp3
+audio: "/audio/2017/message-2017-04-16.mp3"
 ---
+

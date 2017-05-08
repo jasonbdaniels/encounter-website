@@ -1,8 +1,8 @@
 ---
-layout: page
-permalink: /about/whatwebelieve/
-nav: false
 title: What We Believe
+permalink: "/about/whatwebelieve/"
+layout: page
+nav: false
 ---
 
 ### 1. God the king and the Holy Trinity

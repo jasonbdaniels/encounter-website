@@ -1,8 +1,8 @@
 ---
-layout: page
 title: Staff and Leaders
-permalink: /staffleaders
-image: /images/cliff-speaking.png
+permalink: "/staffleaders"
+layout: page
+image: "/images/cliff-speaking.png"
 ---
 
 <div style="width:33vw;">
