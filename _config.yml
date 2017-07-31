@@ -41,3 +41,4 @@ exclude:
 - how-to
 - Gemfile
 - Gemfile.lock
+- run
