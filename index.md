@@ -17,3 +17,9 @@ nav: false
 {% endfor %}
 
 {% include message-index-2.0.html messages=messages %}<br>
+
+<form action="{{ "/search.html" | absolute_url }}" method="get">
+  <label for="search-box">Search</label>
+  <input type="text" id="search-box" name="query">
+  <input type="submit" value="search">
+</form>
