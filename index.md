@@ -10,6 +10,10 @@ nav: false
 
 # Latest Messages
 
+{% include searchfield.html %}
+
+<br>
+
 {% assign messages = "" | split: " " %}
 
 {% for message in site.tags.message limit: 5 %}

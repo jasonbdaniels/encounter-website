@@ -5,5 +5,5 @@ tags:
 - message
 layout: message
 audio: "/audio/2016/message 10-23-16.mp3"
-author: cliff
+author: steve
 ---
