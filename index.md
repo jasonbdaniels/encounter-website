@@ -8,11 +8,11 @@ images:
 nav: false
 ---
 
-<div style="height: 10px;"></div>
+# Latest Messages
 
 {% include searchfield.html %}
 
-# Latest Messages
+<br>
 
 {% assign messages = "" | split: " " %}
 
