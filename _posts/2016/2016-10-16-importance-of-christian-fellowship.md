@@ -11,6 +11,7 @@ authors:
 ---
 
 Three ways Christian fellowship has benefited our lives’ is:
+
   1. Through encouragement
   2. Growth
   3. Leadership
