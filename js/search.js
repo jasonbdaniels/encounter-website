@@ -7,13 +7,13 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><p><a href="' + item.url + '"><h3 style="display: inline">' + item.title + '</h3>, <span class="post-meta">' + item.date + ' • ' + item.author + '</span></a>';
+        appendString += '<li><a href="' + item.url + '"><p><h3 style="display: inline">' + item.title + '</h3>, <span class="post-meta">' + item.date + ' • ' + item.author + '</span>';
 
         if (item.content.length > 0) {
           appendString += '<p>' + item.content.substring(0, 150) + '...</p>';
         }
 
-        appendString += '</p></li>'
+        appendString += '</p></a></li>'
       }
 
       searchResults.innerHTML = appendString;

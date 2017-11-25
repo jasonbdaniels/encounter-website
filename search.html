@@ -14,7 +14,7 @@ layout: default
         {{ site.data.authors[post.author].name }}
       {% endif %}
       {% if post.authors %}
-        {% for author in post.authors %} {{ site.data.authors[author].name }} {% endfor %}
+        {% for author in post.authors %} {{ site.data.authors[author].name }} {% unless forloop.last %}•{% endunless %} {% endfor %}
       {% endif %}
       {% endcapture %}
       "{{ post.url | slugify }}": {
