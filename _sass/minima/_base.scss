@@ -209,38 +209,41 @@ pre {
 }
 
 input {
-  height: 23px;
+  height: 1cm;
   font-size: 18px;
   display: inline;
+  -webkit-appearance: none;
+  border-radius: 4px;
+  border: 2px solid $grey-color-light;
 }
 
 input[type=text] {
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid #ccc;
-  // border-radius: 4px;
   font-size: 16px;
-  // background-color: white;
-  // background-image: url('searchicon.png');
-  // background-position: 10px 10px;
-  // background-repeat: no-repeat;
   padding: 12px 20px 12px 12px;
-  // -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 
 #search-box {
-  padding-right: 65px;
+  padding-right: 7.5ex;
 }
 
 #search-button {
   position: absolute;
-  right: 4px;
+  right: 0;
   top: 0;
   bottom: 0;
   left: auto;
   margin: auto;
-  width: 55px;
+  background-color: $brand-color;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  width: 7ex;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
 }
 
 #search-form {
