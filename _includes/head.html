@@ -6,6 +6,11 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
   {% seo %}
+  {% if page.audio %}
+  <meta property="og:audio:url" content="{{ page.audio | absolute_url }}" />
+  <meta property="og:audio:type" content="audio/mpeg" />
+  <meta property="og:image"  content="{{ "/images/podcast-logo.png" | absolute_url }}" />
+  {% endif %}
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
