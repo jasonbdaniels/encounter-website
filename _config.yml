@@ -15,6 +15,7 @@ defaults:
   values:
     layout: message
 image: "/images/site-logo.png"
+logo: "/images/site-logo.png"
 author: Encounter Vineyard Church
 email: jasonbdaniels@gmail.com
 description: Find what you're looking for.
@@ -28,6 +29,8 @@ admin:
 baseurl: "/encounter-website"
 url: https://jasonbdaniels.github.io
 facebook_username: encounter.vineyard
+facebook:
+  publisher: encounter.vineyard
 cloud:
   s3:
     audio: https://s3.us-east-2.amazonaws.com/encounter-resources
